@@ -31,10 +31,10 @@ public class TvController {
 		return TVService.findbyid(id).get();
 	}
 
-	@PostMapping(path = "/add")
+	@PostMapping(path = "add")
 	public TV addTV(@RequestBody TV p) {
 
-		return TVService.create(this.TVService.findbyid(p.getId()).get());
+		return TVService.create(p);
 	}
 
 	@DeleteMapping("/{id}")
